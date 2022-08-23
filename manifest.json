@@ -1,7 +1,7 @@
 {
   "name": "TMO Enhanced",
   "description": "Mejoras para la web lectortmo",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
