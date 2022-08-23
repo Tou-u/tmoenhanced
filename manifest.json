@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "TMO Enhanced",
+  "description": "Mejoras para la web lectortmo",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -8,9 +8,20 @@
   },
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/16.png",
+      "32": "/images/32.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
   },
-  "options_page": "options.html",
+  "icons": {
+    "16": "/images/16.png",
+    "32": "/images/32.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://lectortmo.com/viewer/*"],
