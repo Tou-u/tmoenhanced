@@ -1,12 +1,13 @@
 {
   "name": "TMO Enhanced",
   "description": "Mejoras para la web lectortmo",
-  "version": "1.1",
+  "version": "0.0.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "declarativeContent"],
+  "host_permissions": ["https://lectortmo.com/"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
