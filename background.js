@@ -1,8 +1,8 @@
-let cascadeMode = false
-let darkMode = false
+let cascadeMode = true
+let darkMode = true
 let hidePointer = false
-let noRedirect = false
-let changeChapter = false
+let noRedirect = true
+let changeChapter = true
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ cascadeMode })
