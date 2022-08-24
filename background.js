@@ -3,6 +3,7 @@ let darkMode = true
 let hidePointer = false
 let noRedirect = true
 let changeChapter = true
+let comentaries = false
 
 chrome.action.disable()
 
@@ -26,4 +27,5 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ hidePointer })
   chrome.storage.sync.set({ noRedirect })
   chrome.storage.sync.set({ changeChapter })
+  chrome.storage.sync.set({ comentaries })
 })

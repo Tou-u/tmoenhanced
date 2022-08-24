@@ -187,3 +187,11 @@ chrome.storage.sync.get("changeChapter", ({ changeChapter }) => {
     return
   }
 })
+
+chrome.storage.sync.get("comentaries", ({ comentaries }) => {
+  if (comentaries) {
+    const comentaries = document.getElementById("disqus_thread")
+    const getbtn = comentaries.getElementsByTagName("button")[0]
+    getbtn.click()
+  }
+})

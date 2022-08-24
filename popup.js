@@ -3,6 +3,7 @@ let ckDarkMode = document.getElementById("ckDarkMode")
 let ckHidePointer = document.getElementById("cKHPointer")
 let ckNoRedirect = document.getElementById("ckNoRedirect")
 let ckChangeChapter = document.getElementById("ckChangeChapter")
+let ckComentaries = document.getElementById("ckComentaries")
 
 const InitializeToggles = () => {
   chrome.storage.sync.get("cascadeMode", ({ cascadeMode }) => {
@@ -39,6 +40,13 @@ const InitializeToggles = () => {
       return
     }
     ckChangeChapter.checked = false
+  })
+  chrome.storage.sync.get("comentaries", ({ comentaries }) => {
+    if (comentaries) {
+      ckComentaries.checked = true
+      return
+    }
+    ckComentaries.checked = false
   })
 }
 
@@ -86,5 +94,14 @@ ckChangeChapter.addEventListener("change", (e) => {
     chrome.storage.sync.set({ changeChapter: true })
   } else {
     chrome.storage.sync.set({ changeChapter: false })
+  }
+})
+
+// Precharge comentaries
+ckComentaries.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    chrome.storage.sync.set({ comentaries: true })
+  } else {
+    chrome.storage.sync.set({ comentaries: false })
   }
 })
