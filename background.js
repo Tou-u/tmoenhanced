@@ -3,7 +3,7 @@ let darkMode = true
 let hidePointer = false
 let noRedirect = true
 let changeChapter = true
-let comentaries = false
+let comentaries = true
 
 chrome.action.disable()
 
